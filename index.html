@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index.html</title>
+    <script src="static/include.js"></script>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Website</h1>
+    </header>
+
+    <main>
+        <p>Starting example: list item maker.</p>
+        <button id="btn-add-item">
+            Add Random Item
+        </button>
+
+        <ul id="list">
+        </ul>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 My Website. All rights reserved.</p>
+    </footer>
+
+    // This is the javascript runtime in the page context
+    <script>
+        window.onload = function() {
+            const myStruct = createStruct();
+            console.log("Created struct:", myStruct);
+            console.log(`accessing element a: ${myStruct.a}`);
+        }
+
+        document.getElementById("btn-add-item").onclick = function() {
+            const list = document.getElementById("list");
+            const newItem = document.createElement("li");
+            newItem.textContent = `Item ${Math.floor(Math.random() * 1000)}`;
+            list.appendChild(newItem);
+        }
+    </script>
+
+</body>
+</html>
