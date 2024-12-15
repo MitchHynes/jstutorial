@@ -7,7 +7,7 @@
     <script src="static/include.js"></script>
     <link rel="stylesheet" href="static/style.css">
 </head>
-<body>
+<body id="body" background-color="white">
     <header>
         <h1>Welcome to My Website</h1>
     </header>
@@ -49,14 +49,16 @@
 
 		<script>
 				window.onload = function() {
-						const changeColour = changeColour();
-						console.log("Created struct:", changeColour);
+						console.log("in change colour function");
 				}
+
 				document.getElementById("btn-change-background-colour").onclick = function() {
-						const new_r = ${Math.floor(Math.random() * 255)};
-						const new_g = ${Math.floor(Math.random() * 255)};
-						const new_b = ${Math.floor(Math.random() * 255)};	
-						body { background-color: rgb(new_r,new_g,new_b) }		
+						console.log("clicked change colour button")
+						let new_r = `${Math.floor(Math.random() * 255)}`;
+						let new_g = `${Math.floor(Math.random() * 255)}`;
+						let new_b = `${Math.floor(Math.random() * 255)}`;	
+						console.log(`new_r = ${new_r} new_g = ${new_g} new_b = ${new_b}`);
+						document.body.style.backgroundColor = `rgb(${new_r} ,${new_g} ,${new_b})`;
 				}
 		</script>
 
