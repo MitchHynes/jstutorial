@@ -20,6 +20,11 @@
 
         <ul id="list">
         </ul>
+
+				<p> Change the background colour!</p>
+				<button id="btn-change-background-colour">
+						Change
+				</button>
     </main>
 
     <footer>
@@ -41,6 +46,19 @@
             list.appendChild(newItem);
         }
     </script>
+
+		<script>
+				window.onload = function() {
+						const changeColour = changeColour();
+						console.log("Created struct:", changeColour);
+				}
+				document.getElementById("btn-change-background-colour").onclick = function() {
+						const new_r = ${Math.floor(Math.random() * 255)};
+						const new_g = ${Math.floor(Math.random() * 255)};
+						const new_b = ${Math.floor(Math.random() * 255)};	
+						body { background-color: rgb(new_r,new_g,new_b) }		
+				}
+		</script>
 
 </body>
 </html>
